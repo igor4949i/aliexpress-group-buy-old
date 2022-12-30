@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-table.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-editable.css">
+
+
+  <link rel="shortcut icon" type="image/jpg" href="./images/aliexpress.ico"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Aliexpress Group Buy</title>
+
+  <style>
+    .select,
+    #locale {
+      width: 100%;
+    }
+  
+    .like {
+      margin-right: 10px;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row info-row">
+      <div class="col-12">
+        <form>
+          <!-- <input type="text" name="parser" id="parser" placeholder="Enter URL" value=""> -->
+          <div class="alert alert-danger form-input-error" role="alert"></div>
+          <button class="parselizer-button" id="data_submit_parselizer">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="loading-button">Create table</span>
+          </button>
+          <!-- <button type="button" class="btn btn-link delete-table">Delete table</button> -->
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Products</h1>
+     
+      <table id="table" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true"
+        data-click-to-select="true" data-toolbar="#toolbar" class="table-responsive">
+        <thead>
+          <tr>
+            <th data-field="prenom" data-sortable="true">First Name</th>
+            <th data-field="date" data-sortable="true">Date</th>
+            <th data-field="examen" data-sortable="true">Examination</th>
+            <th data-field="note" data-sortable="true">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>Jitender</td>
+            <td>01/09/2015</td>
+            <td>Français</td>
+            <td>12/20</td>
+          </tr>
+          <tr>
+            <td>Jahid</td>
+            <td>05/09/2015</td>
+            <td>Philosophie</td>
+            <td>8/20</td>
+          </tr>
+          <tr>
+            <td>Valentin</td>
+            <td>05/09/2015</td>
+            <td>Philosophie</td>
+            <td>4/20</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+    
+      
+  </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap-table.js"></script>
+  <script src="./js/bootstrap-table-editable.js"></script>
+  <script src="./js/tableExport.js"></script>
+  <script src="./js/bootstrap-table-filter-control.js"></script>
+  
+  <script src="./main.js"></script>
+
+</body>
+</html>
