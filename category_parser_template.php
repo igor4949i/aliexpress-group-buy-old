@@ -14,21 +14,21 @@ $url_ali = 'html_files/html_1/Group buy.html';
 $html_ali = file_get_contents($url_ali);
 $doc =  phpQuery::newDocument($html_ali);
 
-
-
-
-
-
-
-
-// get data from MAIN.JS -- $.post
-$url_category = $_POST['parser_data'];
-
-// create list URLs products
 $url_product_array = [];
 
-$list_category_page_url = [];
-// array_push($list_category_page_url, $url_category);
+$test = $doc -> find('.ProductList--productListWrapper--1swWq9C')->html();
+
+$test1 = $test->find('div[exp_items]');
+
+foreach ($variable as $key => $test1) {
+  echo $variable . '</br>';
+}
+
+// echo $test . '</br>';
+
+
+
+
 
 
 // category_url_product($url_category);
