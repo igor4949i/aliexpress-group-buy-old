@@ -75,4 +75,14 @@ $(document).ready(function(){
 
 
 
+$(document).ready(function () {
+  $('.sort-table-product').DataTable({
+    "asSorting": [],
+    "scrollY": "100%",
+    "scrollX": "100%",
 
+    "scrollCollapse": true,
+    "paging": false
+  });
+  // $('.dataTables_length').addClass('bs-select');
+});

@@ -14,17 +14,22 @@ $url_ali = 'html_files/html_1/Group buy.html';
 $html_ali = file_get_contents($url_ali);
 $doc =  phpQuery::newDocument($html_ali);
 
-$url_product_array = [];
+$list_products = $doc -> find('.ProductList--productListWrapper--1swWq9C')->html();
+echo $list_products . '</br>';
 
-$test = $doc -> find('.ProductList--productListWrapper--1swWq9C')->html();
+$json_reg = '/itemid&quot;:&quot;.*&quot;,&quot;stock&quot;/';
+preg_match_all($json_reg, $list_products, $json_array, PREG_SET_ORDER, 0);
+$json_list_url = [];
 
-$test1 = $test->find('div[exp_items]');
-
-foreach ($variable as $key => $test1) {
-  echo $variable . '</br>';
+for ($i=0; $i < count($json_array); $i++) {
+    // $json_array[$i][0] = preg_replace('/&q;original&q;:{&q;url&q;:&q;/', '', $json_array[$i][0]);
+    // $json_array[$i][0] = preg_replace('/&q;/', '', $json_array[$i][0]);
+    // array_push($json_list_url, $json_array[$i][0]);
+    echo 'test' . '</br>';
 }
 
-// echo $test . '</br>';
+
+// echo $product_array[0][0] . '</br>';
 
 
 
