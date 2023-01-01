@@ -63,23 +63,13 @@ $(document).ready(function(){
   });
 });
 
-// $("#data_create_excel").click(function () {
-//   $("#table").table({
-//     // exclude CSS class
-//     exclude: ".noExl",
-//     name: "Worksheet Name",
-//     filename: "Parselizer_Table", //do not include extension
-//     fileext: ".csv" // file extension
-//   });
-// });
-
 
 
 $(document).ready(function () {
   $('.sort-table-product').DataTable({
     "asSorting": [],
     "scrollY": "100%",
-    "scrollX": "100%",
+    "scrollX": false,
 
     "scrollCollapse": true,
     "paging": false
